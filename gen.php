@@ -15,5 +15,16 @@
             <img src="logo.png" id="logo"/>
             <a class="genbutton" href="gen.php">Generate Your Own!</a>
         </header>
+        <canvas id="cv"></canvas>
+        <input id="top">
+        <input id="bottom">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Meme('Meme.js/demo/example.jpg', 'cv', '', '');
+                $('input').keyup(function () {
+                    Meme('Meme.js/demo/example.jpg', 'cv', $('#top').val(), $('#bottom').val());
+                });
+            });
+        </script>
     </body>
 </html>
